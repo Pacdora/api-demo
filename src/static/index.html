@@ -54,7 +54,6 @@
             >Pouchs</a
           >
         </div>
-        <div class="login-btn">Login</div>
       </div>
       <div class="body">
         <div class="body-content">
@@ -143,20 +142,16 @@
   <script src="./js/tips.js"></script>
   <script src="./js/index.js"></script>
   <script src="./js/base.js"></script>
-  <script src="https://cdn.pacdora.com/Pacdora-v1.1.1.js"></script>
+  <script src="https://cdn.pacdora.com/Pacdora-v1.1.2.js"></script>
   <script>
     const userId = localStorage.getItem("username");
-    let externalId = localStorage.getItem("externalId");
-    if (!externalId) {
-      externalId = Math.random().toFixed(16).substring(1).toString(16);
-      localStorage.setItem("externalId", externalId);
-    }
     setTimeout(async () => {
       await Pacdora.init({
-        userId: userId ?? externalId,
-        appId: "Your app ID",
+        userId: userId ?? undefined,
+        appId: "app_id123",
         isDelay: true,
       });
+      setHeaderUser();
     }, 1000);
   </script>
 </html>
