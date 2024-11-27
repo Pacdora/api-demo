@@ -401,7 +401,7 @@ const ApiTips = {
             <div
             class="download-text"
             data-pacdora-ui="download"
-            data-app-key="app_key123"
+            data-app-key="Your app key"
             data-pacdora-id="download"
             data-ui-tip="download"
           >
